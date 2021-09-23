@@ -3,8 +3,8 @@ title: Romeo and Juliet
 date: "2009-12-11T17:26:32Z"
 category: "Movie"
 tags: ["movie", "story"]
-slug: "romeo-and-juliet"
 description: "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
+author: "Nilay Patel"
 ---
 
 Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.

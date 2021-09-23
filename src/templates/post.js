@@ -1,39 +1,36 @@
 import React from "react"
-// import { graphql } from "gatsby"
-// import Image from "gatsby-image"
+import { graphql } from "gatsby"
 
-// export const query = graphql`
-//   query($slug: String!) {
-//     productsJson(slug: { eq: $slug }) {
-//       title
-//       description
-//       price
-//       image {
-//         childImageSharp {
-//           fluid {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+import PageLayout from "@components/PageLayout"
+import Post from "@components/Post"
 
-const Post = () => {
-  // const product = data.productsJson
+const PostTemplate = ({ data }) => {
+  const { markdownRemark } = data
 
   return (
-    <div>
-      {/* <h1>{product.title}</h1>
-      <Image
-        fluid={product.image.childImageSharp.fluid}
-        alt={product.title}
-        style={{ float: "left", marginRight: "1rem", width: 150 }}
-      />
-      <p>{product.price}</p>
-      <div dangerouslySetInnerHTML={{ __html: product.description }} /> */}
-    </div>
+    <PageLayout pageTitle={markdownRemark.frontmatter.title}>
+      <Post html={markdownRemark.html} {...markdownRemark.frontmatter} />
+    </PageLayout>
   )
 }
 
-export default Post
+export const query = graphql`
+  query PostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      wordCount {
+        words
+      }
+      frontmatter {
+        title
+        description
+        date(formatString: "MMMM DD, YYYY")
+        category
+        tags
+        author
+      }
+    }
+  }
+`
+
+export default PostTemplate

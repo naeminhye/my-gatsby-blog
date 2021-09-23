@@ -1,21 +1,22 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import "./styles.scss"
 
-const NavBar = () => (
+const NavBar = ({ title }) => (
   <header className="navbar">
-    <div className="navbar__title navbar__item">My Gatsby Blogs</div>
+    <div className="navbar__title navbar__item">{title}</div>
     <div className="navbar__item">
-      <a href="/">Home</a>
+      <Link to="/">Home</Link>
     </div>
     <div className="navbar__item">
-      <a href="/about">About</a>
+      <Link to="/about">About</Link>
     </div>
     <div className="navbar__item">
-      <a href="/contact">Contact</a>
+      <Link to="/posts">Posts</Link>
     </div>
     <div className="navbar__item">
-      <a href="/posts">Posts</a>
+      <Link to="/contact">Contact</Link>
     </div>
   </header>
 )

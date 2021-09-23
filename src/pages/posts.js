@@ -9,17 +9,22 @@ export default function Posts() {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
     query PostsQuery {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 10
+      ) {
         edges {
           node {
-            id
-            excerpt(pruneLength: 250)
             frontmatter {
               title
-              date(formatString: "MMMM DD, YYYY")
               description
+              date(formatString: "MMMM DD, YYYY")
+              category
+              tags
+              author
             }
             fields {
+              slug
               path
             }
           }
@@ -28,18 +33,12 @@ export default function Posts() {
     }
   `)
 
-  console.log({ edges })
   return (
     <PageLayout pageTitle="Posts">
       <h1>Posts page</h1>
       <div>
         {edges.map(({ node: { id, exerpt, fields, frontmatter } }) => (
-          <PostItem
-            key={id}
-            date={frontmatter.date}
-            path={fields.path}
-            title={frontmatter.title}
-          />
+          <PostItem key={id} path={fields.path} {...frontmatter} />
         ))}
       </div>
     </PageLayout>

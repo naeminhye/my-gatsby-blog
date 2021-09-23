@@ -1,9 +1,3 @@
-// google fonts
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
-
-@import "variables";
-@import "mixins";
-
 a {
   text-decoration: none;
   &:hover {
@@ -15,4 +9,15 @@ body {
   margin: 0;
   font-family: $typography-font-family;
   color: $color-default;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }

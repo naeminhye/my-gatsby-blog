@@ -34,23 +34,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const result = await graphql(`
     query {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 10
-      ) {
+      allMarkdownRemark {
         edges {
           node {
-            html
-            wordCount {
-              words
-            }
-            frontmatter {
-              title
-              description
-              date(formatString: "MMMM DD, YYYY")
-              category
-              tags
-            }
             fields {
               slug
               path

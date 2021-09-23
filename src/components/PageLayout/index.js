@@ -23,15 +23,15 @@ export default function PageLayout({ pageTitle = "", children }) {
   `)
 
   return (
-    <>
+    <div className="layout">
       <Helmet>
         <title>
           {pageTitle} | {siteTitle}
         </title>
         <meta name="description" content={description} />
       </Helmet>
-      <NavBar />
-      {children}
-    </>
+      <NavBar title={siteTitle} />
+      <main className="main">{children}</main>
+    </div>
   )
 }

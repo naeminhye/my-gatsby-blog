@@ -1,1 +1,27 @@
-@import "@styles/global";
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.post__item {
+  padding: rem(12) rem(16);
+
+  &--title {
+    font-size: rem(16);
+    line-height: rem(16);
+    margin: rem(10) 0;
+  }
+
+  &--read-more {
+    font-size: rem(14);
+    text-decoration: underline;
+  }
+
+  &--meta-item {
+    font-size: rem(14);
+  }
+  &--meta-item:not(:last-child) {
+    &::after {
+      margin: 0 rem(8);
+      content: "\2022";
+    }
+  }
+}

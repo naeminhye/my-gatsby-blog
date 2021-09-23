@@ -1,1 +1,12 @@
-@import "@styles/global";
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(54);
+}
+
+.main {
+  flex: 0 1 auto;
+}
