@@ -1,7 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-
-import PageLayout from "@components/PageLayout"
 
 import "./styles.scss"
 
