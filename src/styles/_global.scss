@@ -1,0 +1,18 @@
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
+
+@import "variables";
+@import "mixins";
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: $typography-font-family;
+  color: $color-default;
+}

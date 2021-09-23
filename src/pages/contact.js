@@ -2,10 +2,10 @@ import React from "react"
 
 import PageLayout from "@components/PageLayout"
 
-export default function Home() {
+export default function Contact() {
   return (
-    <PageLayout pageTitle="Home">
-      <h1>Welcome to my blog</h1>
+    <PageLayout pageTitle="Contact">
+      <h1>Contact page</h1>
     </PageLayout>
   )
 }
