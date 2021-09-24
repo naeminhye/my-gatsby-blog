@@ -2,6 +2,7 @@
 $color-default: #333;
 $color-primary: #5d93ff;
 $color-secondary: #f7a046;
+$color_dark_gray: #aeaeae;
 
 // typography
 $typography-font-family: "Roboto Mono", monospace;
@@ -12,3 +13,9 @@ $typography-base-font-size: 16px;
 $breakpoint-sm: 685px;
 $breakpoint-md: 960px;
 $breakpoint-lg: 1100px;
+
+// border
+$border-color-base: $color_dark_gray;
+$border-width-base: 1px;
+$border-style-base: solid;
+$border-radius-base: 4px;

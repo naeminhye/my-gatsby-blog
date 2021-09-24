@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import PageLayout from "@components/layout/PageLayout"
-import Post from "@components/Post"
+import PostLayout from "@components/layout/PostLayout"
 
 const PostTemplate = ({ data }) => {
   const { markdownRemark } = data
 
   return (
     <PageLayout pageTitle={markdownRemark.frontmatter.title}>
-      <Post html={markdownRemark.html} {...markdownRemark.frontmatter} />
+      <PostLayout html={markdownRemark.html} {...markdownRemark.frontmatter} />
     </PageLayout>
   )
 }

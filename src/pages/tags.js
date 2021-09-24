@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 import PageLayout from "@components/layout/PageLayout"
-import kebabCase from "lodash/kebabCase"
 
 export default function Tags() {
   const {

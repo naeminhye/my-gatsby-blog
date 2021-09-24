@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import PageLayout from "@components/layout/PageLayout"
-import PostItem from "@components/PostItem"
+import PostThumbnail from "@components/thumbnail/PostThumbnail"
 
 export default function Posts() {
   const {
@@ -38,7 +38,7 @@ export default function Posts() {
       <h1>Posts page</h1>
       <div>
         {edges.map(({ node: { id, exerpt, fields, frontmatter } }) => (
-          <PostItem key={id} path={fields.path} {...frontmatter} />
+          <PostThumbnail key={id} path={fields.path} {...frontmatter} />
         ))}
       </div>
     </PageLayout>

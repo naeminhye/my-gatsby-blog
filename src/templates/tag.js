@@ -4,7 +4,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import PageLayout from "@components/layout/PageLayout"
-import PostItem from "@components/PostItem"
+import PostThumbnail from "@components/thumbnail/PostThumbnail"
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -18,7 +18,7 @@ const TagTemplate = ({ pageContext, data }) => {
       <h1>{tagHeader}</h1>
       <div>
         {edges.map(({ node: { id, fields, frontmatter } }) => (
-          <PostItem key={id} path={fields.path} {...frontmatter} />
+          <PostThumbnail key={id} path={fields.path} {...frontmatter} />
         ))}
       </div>
       <Link to="/tags">all tags</Link>
