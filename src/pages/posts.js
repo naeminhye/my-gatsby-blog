@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import PageLayout from "@components/PageLayout"
+import PageLayout from "@components/layout/PageLayout"
 import PostItem from "@components/PostItem"
 
 export default function Posts() {
