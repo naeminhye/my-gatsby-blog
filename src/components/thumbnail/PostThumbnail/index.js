@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import "./styles.scss"
 
-const PostItem = ({ date, path, title, author, tags, description }) => (
+const PostThumbnail = ({ date, path, title, author, tags, description }) => (
   <div className="post__item">
     <h2 className="post__item--title">
       <Link to={path}>{title}</Link>
@@ -17,4 +17,4 @@ const PostItem = ({ date, path, title, author, tags, description }) => (
     </Link>
   </div>
 )
-export default PostItem
+export default PostThumbnail

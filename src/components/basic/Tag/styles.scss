@@ -1,0 +1,8 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.tag {
+  font-size: rem(12);
+  padding: rem(4) rem(6);
+  cursor: pointer;
+}
